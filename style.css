@@ -112,23 +112,29 @@ small{
     letter-spacing: 3px; 
 }
 
+.waveani{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 129px;
+}
+
 section
 {
     position: relative;
-    width:100%;
-    height: 100%; 
+    width: 100%;
+    height: 129px; 
     background: #fff;
-    overflow: hidden;
-    top: 100%;
+    overflow: hidden; 
 }
 
 section .wave
 {
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100px;
     background: url(wave.png);
     background-size: 1000px 100px;
 }
@@ -136,6 +142,10 @@ section .wave
 section .wave.wave1
 {
     animation: wavyanimate 30s Linear infinite;
+    z-index: 1000;
+    opacity: 0.7;
+    animation-delay: 0s;
+    bottom: 0px;
 }
 @keyframes wavyanimate
 {
@@ -148,3 +158,62 @@ section .wave.wave1
         background-position-x: 1000px;
     }
 }
+section .wave.wave2
+{
+    animation: wavyanimate2 15s Linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 0px;
+}
+@keyframes wavyanimate2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+section .wave.wave3
+{
+    animation: wavyanimate3 30s Linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 0px;
+}
+@keyframes wavyanimate3
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+.boat{
+    position: absolute;
+    display: inline;
+    background-image: url(paper-boat.png);
+    width: 512px;
+    height: 400px;
+    bottom: 10px;
+    right: 100px;
+    background-size: 512px 512px;
+    animation: boatmove 6s infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes boatmove{
+    0% {transform: rotate(1deg)translate(0px,0px)}
+    25% {transform:rotate(-1deg) translate(0px,-25px)  }
+    50% {transform:rotate(1deg) translate(0px, 0px) }
+    75% {transform:rotate(-1deg) translate(0px,-20px)}
+    100%{transform:rotate(1deg) translate(0px,0px)}
+    }
