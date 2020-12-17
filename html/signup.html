@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>타임캡슐 회원가입</title>
+    <link rel="stylesheet" href="signup.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <script language="javascript">
+        function clicked(){
+            if(document.form.id.value==""){
+                alert("아이디를 입력하세요");
+                document.form.id.focus();
+                return;
+            }
+            if(document.form.pw.value==""){
+                alert("비밀번로를 입력하세요");
+                document.form.pw.focus();
+                return;
+            }
+        }
+    </script>
+
+    <body>
+        <div class="login">
+            <div class="banner">
+                <h1>회원가입!</h1>
+            </div>
+            <form name="form" action="singup.jsp" method="POST">
+                <div class="text_insert">
+                    id:<input type="text" style="width: 441px ; height: 52px; margin-bottom: 8px;" name = "id">
+                    <br>
+                    pw:<input type="text" style="width: 441px ; height: 52px; margin-bottom: 8px;" name = "pw">
+                    <br>
+                    email<input type="text" style="width: 441px ; height: 52px; margin-bottom: 8px;" name = "email">
+                    <br>
+                    nickname<input type="text" style="width: 441px ; height: 52px; margin-bottom: 8px;" name = "nickname">
+                </div>
+                
+                <div class ="button">
+                    <input type="submit" class="btn btn-Success" style="width: 441px ; height: 52px" value="회원가입!" >
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

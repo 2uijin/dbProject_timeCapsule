@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.menu ul{
+    display: inline-flex;
+    margin: 50px;
+}
+
+.menu ul li{
+    list-style: none;
+    margin: 0 20px;
+    color : #b2b1b1;
+    cursor: pointer;
+}
+.logo img{
+    width: 30px;
+    margin-top: -7px;
+    margin-right: 48px;
+}
+
+.active {
+    color: #5fa2ad !important;
+}
+
+.signup-btn{
+    top :40px;
+    right: 80px;
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#ffffff,#ffffff),radial-gradient(circle at top left,#fd00da,#19d7f8);
+    background-origin: border-box;
+    background-clip:  content-box, border-box;
+}
+
+.signup-btn span{
+    display: block;
+    padding: 8px 22px;
+    color: #41455a;
+}
+
+.banner{
+    width: 80%;
+    height: 60%;
+    top: 25%;
+    left: 130px;
+    position: absolute;
+    color: #41455a;
+    font-style: initial;
+}
+
+.App-text{
+    width: 50%;
+    float: left;
+}
+.App-text h1
+{
+    font-size: 43px;
+    width: 640px;
+    position: relative;
+    margin-left: 40px;
+}
+.App-text p
+{
+    width: 650px;
+    font-size: 15px;
+    margin:30px  0 30px 40px;
+    line-height: 25px;
+    color: #919191;
+}
+.app-picture{
+    width: 100%;
+    float: right;
+}
+
+
+.play-btn{
+   margin-left: 40px;
+   display: inline-flex; 
+}
+
+.play-btn-inner{
+    height: 50px;
+    width: 50px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-image: linear-gradient( #fff, #fff),radial-gradient(circle at top left,#fd00da,#19d7f8);
+    background-origin: border-box;
+    background-clip:  content-box, border-box;
+}
+
+.play-btn-inner .fa{
+    padding: 18px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+small{
+    margin: auto 20px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #19dafa;
+    letter-spacing: 3px; 
+}
+
+.waveani{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 129px;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 129px; 
+    background: #fff;
+    overflow: hidden; 
+}
+
+section .wave
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1
+{
+    animation: wavyanimate 30s Linear infinite;
+    z-index: 1000;
+    opacity: 0.7;
+    animation-delay: 0s;
+    bottom: 0px;
+}
+@keyframes wavyanimate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+section .wave.wave2
+{
+    animation: wavyanimate2 15s Linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 0px;
+}
+@keyframes wavyanimate2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+section .wave.wave3
+{
+    animation: wavyanimate3 30s Linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 0px;
+}
+@keyframes wavyanimate3
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+.boat{
+    position: absolute;
+    display: inline;
+    background-image: url(paper-boat.png);
+    width: 512px;
+    height: 400px;
+    bottom: 10px;
+    right: 100px;
+    background-size: 512px 512px;
+    animation: boatmove 6s infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes boatmove{
+    0% {transform: rotate(1deg)translate(0px,0px)}
+    25% {transform:rotate(-1deg) translate(0px,-25px)  }
+    50% {transform:rotate(1deg) translate(0px, 0px) }
+    75% {transform:rotate(-1deg) translate(0px,-20px)}
+    100%{transform:rotate(1deg) translate(0px,0px)}
+    }
